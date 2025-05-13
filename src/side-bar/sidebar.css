@@ -1,0 +1,138 @@
+/* To adjust the position */
+.bar {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
+
+.sidebar-button {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-inline: auto;
+  z-index: 13;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-button svg {
+  fill: rgb(71, 71, 219);
+}
+
+.items-holder {
+  width: 60px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 11;
+}
+
+.holder-open {
+  opacity: 1;
+  animation: slideIn 0.6s ease-in-out;
+}
+
+.holder-h:hover {
+  width: 130px;
+}
+
+.item {
+  width: 100%;
+  height: 60px;
+  /* outline: 1px solid white; */
+  color: rgb(71, 71, 219);
+  align-content: center;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.item .item-label {
+  display: none;
+}
+
+.holder-h .item:hover {
+  background-color: rgb(40, 148, 244);
+  border-radius: 15px;
+}
+
+.holder-h:hover .item .item-label {
+  display: inline;
+  font-family: serif;
+  font-size: 0.8rem;
+  justify-self: start;
+  text-decoration: none;
+}
+
+.holder-h:hover .item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+}
+
+.holder-open a {
+  width: 100%;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+/* .holder-h:hover .nav-link .item {
+  color: white;
+} */
+
+.nav-link.active .item {
+  background-color: rgb(237, 237, 237);
+  color: #ff6206;
+}
+
+.holder-close {
+  opacity: 0;
+  top: -500px;
+  animation: slideOut 0.1s ease-in-out;
+}
+
+.but-animated {
+  transform: scale(0.9);
+  transition: ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    top: -500px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    top: 0px;
+  }
+
+  100% {
+    opacity: 0;
+    top: -500px;
+  }
+}
