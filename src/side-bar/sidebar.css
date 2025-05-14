@@ -64,6 +64,11 @@
   display: none;
 }
 
+.item-icon {
+  display: flex;
+  justify-content: center;
+}
+
 .holder-h .item:hover {
   background-color: rgb(40, 148, 244);
   border-radius: 15px;
